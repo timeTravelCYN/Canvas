@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%
+    }
+
+    #canvas {
+      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 10%;
+      top: 5%;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script src="../utils/utils.js"></script>
+  <script>
+    const canvas = document.getElementById('canvas')
+    const ctx = canvas.getContext('2d')
+    canvas.style.width = '800px'
+    canvas.style.height = '600px'
+    console.log(ctx)
+    let pos = C.getOffset(canvas)
+    canvas.onclick = function () {
+      console.log(pos.x, pos.y)
+    }
+  </script>
+</body>
+</html>
